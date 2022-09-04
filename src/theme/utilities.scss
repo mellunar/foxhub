@@ -1,0 +1,124 @@
+/* font-weight */
+$weights: (
+  '500': 500,
+  '600': 600,
+  '700': 700,
+  '800': 800,
+);
+
+/* width */
+$widths: (
+  '100': 100%,
+  '80': 80%,
+  '75': 75%,
+  '66': 66.6%,
+  '60': 60%,
+  '50': 50%,
+  '40': 40%,
+  '33': 33.3%,
+  '25': 25%,
+  '20': 20%,
+);
+
+@each $width, $width-value in $widths {
+  .u-width--#{$width} {
+    width: $width-value;
+  }
+}
+
+@each $weight, $weight-value in $weights {
+  .u-font-weight--#{$weight} {
+    font-weight: $weight-value;
+  }
+}
+
+/* margin & padding */
+$directions: 'top', 'right', 'bottom', 'left';
+$sizes: (
+  'auto': auto,
+  'none': 0,
+  'xs': var(--size-xs),
+  'sm': var(--size-sm),
+  'md': var(--size-md),
+  'lg': var(--size-lg),
+  'xl': var(--size-xl),
+);
+
+@each $direction in $directions {
+  @each $size, $size-value in $sizes {
+    .u-margin--#{$size} {
+      margin: $size-value !important;
+    }
+
+    .u-margin-x--#{$size} {
+      margin-left: $size-value !important;
+      margin-right: $size-value !important;
+    }
+
+    .u-margin-y--#{$size} {
+      margin-top: $size-value !important;
+      margin-bottom: $size-value !important;
+    }
+
+    .u-margin-#{$direction}--#{$size} {
+      margin-#{$direction}: $size-value !important;
+    }
+
+    @if $size != 'auto' {
+      .u-padding--#{$size} {
+        padding: $size-value !important;
+      }
+
+      .u-padding-x--#{$size} {
+        padding-left: $size-value !important;
+        padding-right: $size-value !important;
+      }
+
+      .u-padding-y--#{$size} {
+        padding-top: $size-value !important;
+        padding-bottom: $size-value !important;
+      }
+
+      .u-padding-#{$direction}--#{$size} {
+        padding-#{$direction}: $size-value !important;
+      }
+    }
+  }
+}
+
+/* display */
+$displays: (
+  'none': none,
+  'contents': contents,
+  'block': block,
+  'flex': flex,
+  'table': table,
+  'inline-block': inline-block,
+  'inline-flex': inline-flex,
+  'inline-table': inline-table,
+);
+
+@each $display, $display-value in $displays {
+  .u-display--#{$display} {
+    display: $display-value !important;
+  }
+}
+
+/* text */
+.u-text-align--center {
+  text-align: center;
+}
+
+.u-user-select--none {
+  user-select: none;
+}
+
+// misc
+.u-link--cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
