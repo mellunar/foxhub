@@ -1,3 +1,5 @@
+@import 'size-break.scss';
+
 /* font-weight */
 $weights: (
   '500': 500,
@@ -104,6 +106,33 @@ $displays: (
   }
 }
 
+@media screen and (max-width: $mobile) {
+  .u-hide--mobile {
+    display: none !important;
+  }
+  .u-show--mobile {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .u-hide--desktop {
+    display: none !important;
+  }
+  .u-show--desktop {
+    display: block !important;
+  }
+}
+
+// flex
+.u-flex-align--center {
+  align-items: center;
+}
+
+.u-flex-justify--center {
+  justify-content: center;
+}
+
 /* text */
 .u-text-align--center {
   text-align: center;
@@ -111,6 +140,10 @@ $displays: (
 
 .u-user-select--none {
   user-select: none;
+}
+
+.u-font-size--md {
+  font-size: var(--size-md);
 }
 
 // misc

@@ -7,6 +7,6 @@
   import Navbar from './core/components/navbar/navbar.svelte';
 </script>
 
-<Router {routes} />
 <Navbar />
+<main><Router {routes} /></main>
 <Footer />

@@ -1,0 +1,15 @@
+.e-header-slider {
+  :global {
+    .swiper-pagination {
+      bottom: 30px;
+    }
+
+    .swiper-button-prev {
+      left: 30px;
+    }
+
+    .swiper-button-next {
+      right: 30px;
+    }
+  }
+}

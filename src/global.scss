@@ -1,5 +1,11 @@
+@import 'swiper/css';
+@import 'swiper/css/autoplay';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
 @import 'theme/app.scss';
 @import 'theme/variables.scss';
 @import 'theme/utilities.scss';
 
 @import 'theme/components/button.scss';
+@import 'theme/components/swiper.scss';
