@@ -35,6 +35,23 @@
     }
   }
 
+  &__list {
+    @media screen and (max-width: $mobile) {
+      position: fixed;
+      top: 70px;
+      left: 0vw;
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      background: var(--color-background);
+      z-index: 998;
+      border-bottom-left-radius: 5px;
+      transition: all 0.35s cubic-bezier(0.37, 0.38, 0.68, 0.68);
+    }
+  }
+
   &__item {
     font-size: 18px;
     font-weight: 500;

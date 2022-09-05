@@ -35,7 +35,7 @@
       <img src="images/foxhub2.png" alt="logo" />
     </a>
 
-    <div class="u-display--flex">
+    <div class="u-display--flex e-navbar__list">
       <a class="e-navbar__item" href="javascript:void()">Canais</a>
       <a class="e-navbar__item" href="javascript:void()">Programas</a>
       <a class="e-navbar__item" href="javascript:void()">Séries</a>

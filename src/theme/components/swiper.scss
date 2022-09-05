@@ -1,3 +1,5 @@
+@import '../size-break.scss';
+
 .c-swiper {
   .swiper-pagination {
     display: flex;
@@ -5,6 +7,10 @@
     justify-content: center;
     height: var(--size-sm);
     gap: var(--size-md);
+
+    @media screen and (max-width: $mobile) {
+      gap: var(--size-sm);
+    }
 
     &:hover .swiper-pagination-bullet {
       height: var(--size-sm);
@@ -36,5 +42,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
   }
 }

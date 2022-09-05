@@ -1,3 +1,5 @@
+@import '../size-break.scss';
+
 .c-button {
   border-radius: 6px;
   font-weight: 700;
@@ -36,6 +38,10 @@
     background: rgba(32, 18, 58, 0.5);
 
     &:hover {
+      background: var(--gradient-foxhub);
+    }
+
+    @media screen and (max-width: $mobile) {
       background: var(--gradient-foxhub);
     }
   }
