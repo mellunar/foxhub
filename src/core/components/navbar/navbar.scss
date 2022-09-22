@@ -18,6 +18,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 var(--size-xxl);
+
+    @media screen and (max-width: $mobile) {
+      padding: 0 var(--size-md);
+    }
   }
 
   &__logo {
@@ -31,6 +35,13 @@
         &:hover {
           filter: invert(0%);
         }
+      }
+
+      @media screen and (max-width: $mobile) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -95,7 +106,7 @@
       background: var(--color-background);
       position: fixed;
       top: 70px;
-      right: var(--size-xxl);
+      right: 0;
       width: 300px;
       border-radius: 3px;
       overflow: hidden;
@@ -120,6 +131,15 @@
 
     &:hover {
       color: var(--color-text-hover);
+    }
+
+    @media screen and (max-width: $mobile) {
+      padding: 0;
+    }
+
+    &-menu {
+      color: var(--color-text-hover);
+      font-size: 26px;
     }
   }
 
