@@ -1,0 +1,53 @@
+:global {
+  .e-channel-item {
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: unset;
+    max-height: 152px;
+    margin: 3px 0;
+    overflow: hidden;
+    padding: 2.5rem 0;
+    position: relative;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+
+    &:hover {
+      border: none !important;
+      background-attachment: fixed;
+
+      img {
+        filter: invert(0%);
+      }
+    }
+
+    img {
+      width: 65%;
+      filter: invert(20%);
+    }
+
+    &--foxhub:hover {
+      background: var(--gradient-foxhub);
+    }
+
+    &--zootv:hover {
+      background: linear-gradient(to right, #348f50, #56b4d3);
+    }
+
+    &--liva:hover {
+      background: linear-gradient(to right, #ff512f, #f09819);
+    }
+
+    &--earth20:hover {
+      background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    }
+
+    &--utosia:hover {
+      background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+    }
+
+    &--kanba:hover {
+      background: linear-gradient(to right, #3c3b3f, #605c3c);
+    }
+  }
+}

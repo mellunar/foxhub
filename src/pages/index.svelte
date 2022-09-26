@@ -1,12 +1,17 @@
 <script>
-  // @ts-ignore
-  import content from '~/assets/content.json';
+  import { headerSlider } from '~/assets/content.json';
+  import ChannelSlider from '~/modules/home/components/channel-slider/channel-slider.svelte';
   import HeaderSlider from '../modules/home/components/header-slider/header-slider.svelte';
 
-  const headerItems = content.headerSlider;
+  const pagination = { clickable: true, hideOnClick: false };
 </script>
 
-<HeaderSlider items={headerItems} />
+<HeaderSlider items={headerSlider} />
+
+<div>
+  <ChannelSlider />
+</div>
+
 <div>
   <button class="c-button c-button--gradient">Teste</button>
   <button class="c-button c-button--general">Teste</button>

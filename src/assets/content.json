@@ -33,31 +33,37 @@
   ],
   "channels": [
     {
+      "id": "foxhub",
       "title": "Fox Hub",
       "logo": "https://bn02pap001files.storage.live.com/y4mCeqNn_1SQxfw3Au7hi-sAvPXigGXMKGKHULR_FXRocQGje2B2nfKha5VEi_wCD-8u3OZfcBAevdn1imsrAgrtjSSylMNIhhvxRllPUV2LuQYdBz-dDwLNKt1Mm4mBWP7gw1jAPIfIY0Vu7SVpTB-7ZVyU4T6RCTHBLp8_AKQDYH8crJOxlF5N7wXhH04hoPb?width=427&height=100&cropmode=none"
     },
 
     {
+      "id": "zootv",
       "title": "Zoo TV",
       "logo": "https://bn02pap001files.storage.live.com/y4mQcVUFNulcSXOAFHrTwMbF2VaQu0_375ge5pH7_DaIAzBP4YfM93KBg8zUAxOsDQmUfLpyjXDXqONFLMnovF9fuojVUp7zS9VGubd5pkr-NqiWDs9zqI0F7E_VIRhTWZlmfb6OfhtQHvxMi4bDz4d08f-wb3KMgxUNf3QUILZrzMDlMKNn8-G1IyWhEEj-rud?width=312&height=100&cropmode=none"
     },
 
     {
+      "id": "liva",
       "title": "Liva",
       "logo": "https://bn02pap001files.storage.live.com/y4mHJr-VGkaTnLFZZQ5sKAo38scz2qUrY7E-bsIQ7wnDd4ARPDrGHG5fqqjgkV46qVIBtpu2APg7hZrnGlb_ir9gBPG9-ISnhWQOSOC1jh-9UO-uBqrnkgI6Ev8ur95hLvh-m3HjnQoLk6EBeUay7a0DQsS0lCRpMwqFEenPBPs_kNUfBFTqjSSEz-RpV1d7eDx?width=250&height=100&cropmode=none"
     },
 
     {
+      "id": "earth20",
       "title": "Earth 2.0",
       "logo": "https://bn02pap001files.storage.live.com/y4mCpYZLZ7H_ylRlMwssmzrJtWWw6Bn6nNmZyGkfKeLPV8x4ncQB95VMyN-1WhoP2k4iM04pyFv0hIVACX6VCBaAGSAScx5P7O7Ey-hfTozknBo7zdDKKVCDxnkwI1ukjzcL2JemYCnlEGtY8PGOwFG1eqpR9vDKtfRI5YvcqHxE7adkjUvohuCLOZniLBC4Urj?width=420&height=100&cropmode=none"
     },
 
     {
+      "id": "utosia",
       "title": "Utosia",
       "logo": "https://bn02pap001files.storage.live.com/y4mulwb2ghNZZRBI7mJN2-opKqv7Ol3TAtJqbdApEYN8CB64BAc97HBpBsiEfmh3W1n_nlyIgrggjupm-ON3Omj-4yWdCKT3KAepdDUP9p4whNstdIwJNdmk5YPDGqL3LxyArl7ql5XnTIJTOn2D0usoEI1Oi6ag5PVi1yRNzuLPm06s5jAozGRtc0ri-mSFFzI?width=300&height=100&cropmode=none"
     },
 
     {
+      "id": "kanba",
       "title": "Kanba",
       "logo": "https://bn02pap001files.storage.live.com/y4mWtFxub-qE3efogr270qrVFWDQV0JQNFHrgmEAY3PmUuyFLzxtdK35k6Yj1ij4uilIGlZ4Ewc8DsJ08jVc3T0SzUYwCEgeUZ9qsvsH6z_A7IhWe4gtsMyyvsQLvv017sZX2kxTxJ3H9ozRlmKZGqxEOtorzGpTUeMC44iD2V-OYL58D9Pt0URd08DCI_A7har?width=384&height=100&cropmode=none"
     }
