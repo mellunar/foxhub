@@ -4,45 +4,57 @@
   let menuOpened = false;
   let userActions = false;
 
-  let actionsButtonRef;
+  let menuDisabled = false;
+  let actionsDisabled = false;
+
   let userActionsRef;
 
-  function toggleMenu() {
-    menuOpened = !menuOpened;
-  }
-
-  function toggleUserActions(event) {
-    userActions = !userActions;
-
-    if (event) {
-      event.stopPropagation();
-    }
-
-    if (userActions) {
-      window.addEventListener('click', closeClickOutside);
-    } else {
-      window.removeEventListener('click', closeClickOutside);
-    }
-  }
-
-  function closeClickOutside(event) {
-    if (actionsButtonRef.contains(event.target)) {
+  function openMenu() {
+    if (menuOpened || menuDisabled) {
       return;
     }
 
-    if (!userActionsRef.contains(event.target)) {
-      toggleUserActions();
+    menuOpened = true;
+  }
+
+  function closeMenu() {
+    if (!menuOpened) {
+      return;
     }
+
+    menuOpened = false;
+    menuDisabled = true;
+
+    setTimeout(() => {
+      menuDisabled = false;
+    }, 1);
+  }
+
+  function openUserActions() {
+    if (userActions || actionsDisabled) {
+      return;
+    }
+
+    userActions = true;
+  }
+
+  function closeUserActions() {
+    if (!userActions) {
+      return;
+    }
+
+    userActions = false;
+    actionsDisabled = true;
+
+    setTimeout(() => {
+      actionsDisabled = false;
+    }, 1);
   }
 </script>
 
 <header class="e-navbar">
   <nav class="e-navbar__container">
-    <button
-      class="e-navbar__button e-navbar__button-menu u-hide--desktop"
-      use:clickOutside
-      on:clickoutside={toggleMenu}
-      on:click={toggleMenu}>
+    <button class="e-navbar__button e-navbar__button-menu u-hide--desktop" on:click={openMenu}>
       {#if menuOpened}
         <i class="bi bi-x" />
       {:else}
@@ -54,7 +66,11 @@
       <img src="images/foxhub2.png" alt="logo" />
     </a>
 
-    <div class="u-display--flex e-navbar__list" class:e-navbar__list-opened={menuOpened}>
+    <div
+      class="u-display--flex e-navbar__list"
+      use:clickOutside
+      on:clickoutside={closeMenu}
+      class:e-navbar__list-opened={menuOpened}>
       <a class="e-navbar__item u-hide--desktop" href="javascript:void()">Pesquisar</a>
       <a class="e-navbar__item" href="javascript:void()">Canais</a>
       <a class="e-navbar__item" href="javascript:void()">Programas</a>
@@ -65,21 +81,19 @@
 
     <div class="e-navbar__actions">
       <button class="e-navbar__button u-hide--mobile"><i class="bi bi-search" /></button>
-      <button
-        class="e-navbar__button e-navbar__actions-user"
-        bind:this={actionsButtonRef}
-        on:click={toggleUserActions}>
+      <button class="e-navbar__button e-navbar__actions-user" on:click={openUserActions}>
         <i class="e-navbar__user-icon u-margin-right--sm bi bi-person-circle" />
-        {#if userActions}
-          <i class="bi bi-chevron-up u-hide--mobile" />
-        {:else}
-          <i class="bi bi-chevron-down u-hide--mobile" />
-        {/if}
+        <i
+          class="bi bi-chevron-up u-hide--mobile"
+          class:bi-chevron-up={userActions}
+          class:bi-chevron-down={!userActions} />
       </button>
 
       <div
         class="e-navbar__actions-menu"
         bind:this={userActionsRef}
+        use:clickOutside
+        on:clickoutside={closeUserActions}
         class:e-navbar__actions-menu-opened={userActions}
         class:e-navbar__actions-menu-shadow={userActionsRef?.scrollHeight > 0}>
         <div class="u-padding-x--xl u-padding-y--md">
