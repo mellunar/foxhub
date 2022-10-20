@@ -1,16 +1,20 @@
 :global {
   .e-channel-item {
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: unset;
-    max-height: 152px;
-    margin: 3px 0;
-    overflow: hidden;
-    padding: 2.5rem 0;
-    position: relative;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+    padding: 3px;
+
+    &__content {
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      max-height: 152px;
+      overflow: hidden;
+      padding: 2.5rem 0;
+      position: relative;
+      box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+    }
 
     &:hover {
       border: none !important;

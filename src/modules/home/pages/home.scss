@@ -1,0 +1,13 @@
+@import '../../../theme/size-break.scss';
+
+.buttons {
+  padding-top: 100px;
+}
+
+.e-home-page {
+  padding: 60px;
+
+  @media screen and (max-width: $mobile) {
+    padding: var(--size-md);
+  }
+}
